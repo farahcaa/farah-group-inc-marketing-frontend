@@ -1,73 +1,42 @@
 export default function Head() {
-  const title =
-    "Vrelte - AI Lead Qualification for HVAC, Roofing, and Plumbing";
-
+  const title = "Farah Group Inc — Civil & Environmental Infrastructure Services";
   const description =
-    "Vrelte catches the contractor leads your phone and inbox are dropping, then answers, qualifies, routes, and books HVAC, roofing, and plumbing jobs 24/7.";
-
-  const url = "https://vrelte.com";
-  const image = "https://vrelte.com/logo.png";
+    "Farah Group Inc delivers expert civil engineering, construction inspection, and project management services for transportation and water infrastructure projects.";
 
   return (
     <>
       <title>{title}</title>
-
       <meta name="description" content={description} />
-
       <meta
         name="keywords"
-        content="AI lead qualification, contractor call answering, HVAC AI receptionist, roofing lead qualification, plumbing lead qualification, missed calls, emergency dispatch, contractor appointment booking"
+        content="civil engineering, construction inspection, project management, infrastructure, transportation, water treatment, environmental engineering, FGI"
       />
+      <meta name="author" content="Farah Group Inc" />
+      <link rel="canonical" href="https://farahgroupinc.com/" />
 
-      <meta name="author" content="Vrelte" />
-      <link rel="canonical" href={url} />
-
-      {/* Open Graph */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content="https://farahgroupinc.com/" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Vrelte" />
+      <meta property="og:site_name" content="Farah Group Inc" />
 
-      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
 
-      {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          name: "Vrelte",
-          applicationCategory: "BusinessApplication",
-          operatingSystem: "Web",
-          url,
+          "@type": "Organization",
+          name: "Farah Group Inc",
+          url: "https://farahgroupinc.com",
           description,
-          offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-          },
-          featureList: [
-            "AI call answering for contractors",
-            "Lead qualification for HVAC, roofing, and plumbing jobs",
-            "Emergency routing to on-call technicians",
-            "Calendar booking automation",
-            "CRM and text lead handoff",
+          serviceType: [
+            "Civil Engineering",
+            "Construction Inspection",
+            "Project Management",
+            "Environmental Infrastructure Services",
           ],
-        })}
-      </script>
-
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: title,
-          url,
-          description,
         })}
       </script>
     </>
