@@ -14,10 +14,12 @@ export default function Head() {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="Farah Group Inc" />
+      <meta property="og:image" content="https://farahgroupinc.com/logo-fgi.png" />
 
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="https://farahgroupinc.com/logo-fgi.png" />
 
       <script type="application/ld+json">
         {JSON.stringify({
@@ -25,6 +27,7 @@ export default function Head() {
           "@type": "Organization",
           name: "Farah Group Inc",
           description,
+          logo: "https://farahgroupinc.com/logo-fgi.png",
           serviceType: [
             "Civil Engineering",
             "Construction Inspection",
