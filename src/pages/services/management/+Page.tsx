@@ -2,7 +2,7 @@ const pillars = [
   {
     title: "Schedule Control",
     description:
-      "We build and maintain detailed CPM schedules, track progress against baseline, and flag delays before they compound — keeping your project on the critical path.",
+      "We build and maintain detailed CPM schedules, track progress against baseline, and flag delays before they compound, keeping your project on the critical path.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -42,7 +42,7 @@ const pillars = [
   {
     title: "Agency Coordination",
     description:
-      "We manage relationships with INDOT, county, municipal, and regulatory agencies — handling submittals, approvals, and utility coordination so your team stays focused.",
+      "We manage relationships with INDOT, county, municipal, and regulatory agencies, handling submittals, approvals, and utility coordination so your team stays focused.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -82,7 +82,7 @@ const pillars = [
   {
     title: "Stakeholder Reporting",
     description:
-      "Clear, consistent reporting for executives, boards, and public agencies — dashboards, progress reports, and meeting facilitation that keep everyone aligned.",
+      "Clear, consistent reporting for executives, boards, and public agencies, dashboards, progress reports, and meeting facilitation that keep everyone aligned.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -102,7 +102,7 @@ const pillars = [
   {
     title: "Contractor Oversight",
     description:
-      "Pre-construction conferences, submittal reviews, RFI management, and closeout documentation — full lifecycle oversight from NTP through project acceptance.",
+      "Pre-construction conferences, submittal reviews, RFI management, and closeout documentation, full lifecycle oversight from NTP through project acceptance.",
     icon: (
       <svg
         className="w-6 h-6"

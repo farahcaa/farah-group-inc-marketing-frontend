@@ -1,61 +1,51 @@
 const projects = [
   {
-    title: "I-65 Corridor Drainage Improvements",
-    category: "Civil Engineering",
-    location: "Central Indiana",
-    description: "Hydraulic analysis and PS&E for a 4-mile drainage rehabilitation along a major state highway, including culvert replacements and channel lining.",
-    image: "/excavation.jpg",
-    tags: ["INDOT", "Drainage", "PS&E"],
-    href: "/projects/placeholderslugs",
+    title: "New Belmont Ferrous Building",
+    category: "Construction Management",
+    client: "Citizens Energy Group",
+    value: "$2,657,000",
+    description:
+      "Purpose-built chemical storage and feed facility for ferrous sulfate at the Belmont WWT Plant, replacing aging basement tanks with a corrosion-resistant, fully SCADA-integrated facility.",
+    image: "/headpic4.webp",
+    tags: ["Water/Wastewater", "Chemical Feed", "New Construction"],
+    href: "/projects/belmont-ferrous-building",
   },
   {
-    title: "Regional Water Treatment Expansion",
+    title: "AWT Effluent Filter Improvement – Phase 1",
     category: "Construction Inspection",
-    location: "Northern Indiana",
-    description: "Resident engineering and inspection services for a $42M plant expansion, covering civil, mechanical, and electrical scopes through commissioning.",
-    image: "/headpic1.webp",
-    tags: ["Water Treatment", "Resident Engineer", "Multi-Discipline"],
-    href: "/projects/placeholderslugs",
+    client: "Citizens Energy Group",
+    value: "$4,875,000",
+    description:
+      "Phase 1 rehabilitation of tertiary sand filter systems at the Belmont and Southport WWTPs, VFD replacements, butterfly valve installations, and manual backup control panels integrated into plant SCADA.",
+    image: "/headpic3.webp",
+    tags: ["Water/Wastewater", "Filter Rehab", "Multi-Plant"],
+    href: "/projects/awt-effluent-filter",
   },
   {
-    title: "Levee Rehabilitation — Wabash River Basin",
-    category: "Civil Engineering",
-    location: "Terre Haute, IN",
-    description: "Geotechnical and civil design for a 2.5-mile levee setback and reconstruction project in coordination with IDNR and local drainage districts.",
-    image: "/Levee.jpg",
-    tags: ["IDNR", "Levee", "Geotechnical"],
-    href: "/projects/placeholderslugs",
-  },
-  {
-    title: "Transit Center Construction Management",
-    category: "Project Management",
-    location: "Indianapolis Metro, IN",
-    description: "Owner's representative services for a multi-modal transit center, managing design-build procurement, contractor coordination, and agency approvals.",
-    image: "/Launch-Shaft.jpg",
-    tags: ["Transit", "Design-Build", "Owner's Rep"],
-    href: "/projects/placeholderslugs",
-  },
-  {
-    title: "US-31 Interchange Reconstruction",
-    category: "Construction Inspection",
-    location: "Hamilton County, IN",
-    description: "Full-time transportation inspection on a $28M interchange reconstruction including bridge work, retaining walls, and signal upgrades.",
-    image: "/headpic2.webp",
-    tags: ["INDOT", "Bridge", "Transportation"],
-    href: "/projects/placeholderslugs",
-  },
-  {
-    title: "Municipal Sewer Master Plan",
-    category: "Civil Engineering",
-    location: "South Bend, IN",
-    description: "Comprehensive sewer system master plan including hydraulic modeling, CIP prioritization, and grant-ready cost estimates for a mid-size municipality.",
+    title: "AWT Solids Management Improvements",
+    category: "Construction Management",
+    client: "Citizens Energy Group",
+    value: "$1,820,000",
+    description:
+      "Added a 6th centrifuge at the Belmont WWTP to restore true standby dewatering capacity and future-proof the facility against increasing solids loading.",
     image: "/LS.jpg",
-    tags: ["Sewer", "Master Plan", "Municipal"],
-    href: "/projects/placeholderslugs",
+    tags: ["Water/Wastewater", "Dewatering", "Capacity Expansion"],
+    href: "/projects/awt-solids-management",
+  },
+  {
+    title: "Belmont & Southport ONS Wall Tie Replacement",
+    category: "Construction Inspection",
+    client: "Citizens Energy Group",
+    value: "$9,264,000",
+    description:
+      "Replaced aging 1980s steel wall ties at aeration tanks and secondary clarifiers across two plants with new exterior support structures, completed ahead of schedule with zero safety incidents.",
+    image: "/headpic2.webp",
+    tags: ["Water/Wastewater", "Structural", "Multi-Plant"],
+    href: "/projects/wall-tie-replacement",
   },
 ];
 
-const categories = ["All", "Civil Engineering", "Construction Inspection", "Project Management"];
+const categories = ["All", "Construction Inspection", "Construction Management"];
 
 const Page = () => {
   return (
@@ -72,7 +62,7 @@ const Page = () => {
             Featured<br /><span style={{ color: "var(--fgi-blue)" }}>Projects</span>
           </h1>
           <p className="text-white/60 text-lg max-w-xl">
-            A selection of civil engineering, inspection, and program management work delivered across Indiana.
+            A selection of construction inspection and management work delivered for public infrastructure clients across Indiana.
           </p>
         </div>
       </section>
@@ -94,10 +84,10 @@ const Page = () => {
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((p) => (
             <a key={p.title} href={p.href} className="group flex flex-col border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="relative h-52 overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
                 <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,18,50,0.6) 0%, transparent 60%)" }} />
                 <div className="absolute top-3 left-3 px-3 py-1 text-white text-[10px] uppercase tracking-widest font-semibold" style={{ backgroundColor: "var(--fgi-blue)" }}>
@@ -105,9 +95,12 @@ const Page = () => {
                 </div>
               </div>
               <div className="flex flex-col flex-1 p-6">
-                <div className="flex items-center gap-2 text-gray-400 text-xs uppercase tracking-wide mb-3">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                  {p.location}
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2 text-gray-400 text-xs uppercase tracking-wide">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    {p.client}
+                  </div>
+                  <span style={{ fontFamily: "'Barlow Condensed', sans-serif", color: "var(--fgi-navy)" }} className="text-sm font-bold">{p.value}</span>
                 </div>
                 <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", color: "var(--fgi-navy)" }} className="text-xl font-bold uppercase mb-3 leading-tight">
                   {p.title}

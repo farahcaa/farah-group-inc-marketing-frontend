@@ -38,7 +38,7 @@ const scope = [
   },
   {
     title: "Coatings & Linings",
-    description: "Surface preparation, application, and DFT verification for protective coatings inside tanks and basins — critical for long-term asset life.",
+    description: "Surface preparation, application, and DFT verification for protective coatings inside tanks and basins, critical for long-term asset life.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -64,7 +64,7 @@ const Page = () => {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, var(--fgi-navy) 40%, transparent 100%)" }} />
         <div style={{ backgroundColor: "var(--fgi-blue)" }} className="absolute top-0 left-0 right-0 h-1" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
-          <a href="/#services" style={{ color: "var(--fgi-blue)" }} className="text-xs uppercase tracking-widest font-semibold mb-4 inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <a href="/services/construction-inspection" style={{ color: "var(--fgi-blue)" }} className="text-xs uppercase tracking-widest font-semibold mb-4 inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             Construction Inspection
           </a>
@@ -72,7 +72,7 @@ const Page = () => {
             Water Treatment<br /><span style={{ color: "var(--fgi-blue)" }}>Plant Inspection</span>
           </h1>
           <p className="text-white/70 text-lg max-w-xl leading-relaxed">
-            Specialized construction oversight for water and wastewater treatment facilities — where quality control directly impacts public health.
+            Specialized construction oversight for water and wastewater treatment facilities, where quality control directly impacts public health.
           </p>
         </div>
       </section>
@@ -119,7 +119,7 @@ const Page = () => {
               Treatment Plants Demand a Higher Standard
             </h2>
             <p className="text-white/60 leading-relaxed mb-4">
-              Unlike most infrastructure projects, defects in water treatment construction don't just cause schedule delays — they can compromise public health and result in regulatory shutdowns. Our inspectors understand that the margin for error is essentially zero.
+              Unlike most infrastructure projects, defects in water treatment construction don't just cause schedule delays, they can compromise public health and result in regulatory shutdowns. Our inspectors understand that the margin for error is essentially zero.
             </p>
             <p className="text-white/60 leading-relaxed">
               FGI brings inspectors with direct treatment plant construction experience, not general construction backgrounds. That distinction matters when you're verifying a membrane bioreactor installation or a chlorine contact basin coating system.

@@ -35,7 +35,7 @@ const capabilities = [
   {
     title: "Utility Infrastructure",
     description:
-      "Water, sewer, and dry utility design and coordination — from preliminary engineering through permit-ready construction plans.",
+      "Water, sewer, and dry utility design and coordination, from preliminary engineering through permit-ready construction plans.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -116,7 +116,7 @@ const Page = () => {
             <span style={{ color: "var(--fgi-blue)" }}>Engineering</span>
           </h1>
           <p className="text-white/70 text-lg max-w-xl leading-relaxed">
-            From concept to construction documents — precise civil engineering delivered on schedule
+            From concept to construction documents, precise civil engineering delivered on schedule
             and built to last.
           </p>
         </div>

@@ -147,7 +147,7 @@ const services = [
     title: "Construction Inspection",
     description:
       "Rigorous inspection services for transportation corridors and water treatment facilities, ensuring compliance with agency standards.",
-    href: "#services",
+    href: "/services/construction-inspection",
   },
   {
     icon: (
@@ -227,7 +227,7 @@ const Page = () => {
             </h1>
             <p className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
               Farah Group Inc delivers expert civil engineering, construction
-              inspection, and project management services — from transportation
+              inspection, and project management services, from transportation
               networks to water treatment facilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -426,7 +426,7 @@ const Page = () => {
               },
               {
                 title: "Accountability",
-                body: "We stand behind our work — from design documents to field inspections, quality is non-negotiable.",
+                body: "We stand behind our work, from design documents to field inspections, quality is non-negotiable.",
               },
               {
                 title: "Partnership",

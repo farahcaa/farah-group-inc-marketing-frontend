@@ -7,7 +7,7 @@ const openings = [
     requirements: ["B.S. Civil Engineering", "5+ years design experience", "AutoCAD / Civil 3D proficiency", "PE license or EIT working toward PE"],
   },
   {
-    title: "Construction Inspector — Transportation",
+    title: "Construction Inspector (Transportation)",
     type: "Full-Time",
     location: "Statewide, IN",
     description: "Perform field inspection on INDOT and local agency transportation projects. Roadway, bridge, and drainage experience strongly preferred.",
@@ -46,7 +46,7 @@ const openings = [
 const values = [
   {
     title: "Meaningful Work",
-    body: "Every project we touch improves public infrastructure — roads people drive, water people drink, facilities communities depend on.",
+    body: "Every project we touch improves public infrastructure, roads people drive, water people drink, facilities communities depend on.",
   },
   {
     title: "Growth & Development",
@@ -142,7 +142,7 @@ const Page = () => {
                     style={{ backgroundColor: "var(--fgi-navy)" }}
                     className="inline-block px-6 py-3 text-white font-semibold uppercase tracking-wide text-xs hover:opacity-80 transition-opacity"
                   >
-                    Apply — careers@farahgroupinc.com
+                    Apply: careers@farahgroupinc.com
                   </a>
                 </div>
               </details>
@@ -158,7 +158,7 @@ const Page = () => {
             <div style={{ color: "var(--fgi-blue)", fontFamily: "'Barlow Condensed', sans-serif" }} className="text-sm font-semibold uppercase tracking-[0.2em] mb-2">Don't See Your Role?</div>
             <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", color: "var(--fgi-navy)" }} className="text-4xl font-extrabold uppercase mb-4">Send Us Your Resume Anyway</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              FGI is always interested in connecting with talented engineers, inspectors, and technical professionals. If you don't see a current opening that fits, reach out — we keep strong candidates on file and hire when the right person is available.
+              FGI is always interested in connecting with talented engineers, inspectors, and technical professionals. If you don't see a current opening that fits, reach out. We keep strong candidates on file and hire when the right person is available.
             </p>
             <a
               href="mailto:careers@farahgroupinc.com"

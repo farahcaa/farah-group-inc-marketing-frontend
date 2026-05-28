@@ -10,7 +10,7 @@ const scope = [
   },
   {
     title: "Bridge & Structure",
-    description: "Structural inspection during bridge construction, retrofit, and rehabilitation — deck pours, falsework, post-tensioning, and bearing installations.",
+    description: "Structural inspection during bridge construction, retrofit, and rehabilitation, deck pours, falsework, post-tensioning, and bearing installations.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -19,7 +19,7 @@ const scope = [
   },
   {
     title: "Drainage & Underground",
-    description: "Trench safety, pipe bedding, culvert installation, and inlet/outlet structure inspection — verifying line, grade, and material compliance.",
+    description: "Trench safety, pipe bedding, culvert installation, and inlet/outlet structure inspection, verifying line, grade, and material compliance.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -46,7 +46,7 @@ const scope = [
   },
   {
     title: "Documentation & Reporting",
-    description: "Daily inspection reports, quantity tracking, photo logs, and nonconformance documentation — complete audit-ready records for every project.",
+    description: "Daily inspection reports, quantity tracking, photo logs, and nonconformance documentation, complete audit-ready records for every project.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -72,7 +72,7 @@ const Page = () => {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, var(--fgi-navy) 40%, transparent 100%)" }} />
         <div style={{ backgroundColor: "var(--fgi-blue)" }} className="absolute top-0 left-0 right-0 h-1" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
-          <a href="/#services" style={{ color: "var(--fgi-blue)" }} className="text-xs uppercase tracking-widest font-semibold mb-4 inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <a href="/services/construction-inspection" style={{ color: "var(--fgi-blue)" }} className="text-xs uppercase tracking-widest font-semibold mb-4 inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             Construction Inspection
           </a>
@@ -80,7 +80,7 @@ const Page = () => {
             Transportation<br /><span style={{ color: "var(--fgi-blue)" }}>Inspection</span>
           </h1>
           <p className="text-white/70 text-lg max-w-xl leading-relaxed">
-            Field-level quality assurance for roads, bridges, and transportation infrastructure — keeping contractors accountable and agencies protected.
+            Field-level quality assurance for roads, bridges, and transportation infrastructure, keeping contractors accountable and agencies protected.
           </p>
         </div>
       </section>

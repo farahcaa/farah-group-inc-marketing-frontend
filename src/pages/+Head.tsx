@@ -1,5 +1,5 @@
 export default function Head() {
-  const title = "Farah Group Inc — Civil & Environmental Infrastructure Services";
+  const title = "Farah Group Inc | Civil & Environmental Infrastructure Services";
   const description =
     "Farah Group Inc delivers expert civil engineering, construction inspection, and project management services for transportation and water infrastructure projects.";
 
