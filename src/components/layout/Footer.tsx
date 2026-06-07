@@ -20,8 +20,8 @@ const Footer = () => {
             Civil &amp; Environmental Infrastructure Services
           </div>
           <p className="text-white/60 text-sm leading-relaxed">
-            Delivering reliable civil, environmental, and infrastructure
-            engineering solutions across Indiana.
+            Delivering rigorous construction inspection, quality assurance, and
+            contract administration for public infrastructure across Indiana.
           </p>
         </div>
 
@@ -39,10 +39,26 @@ const Footer = () => {
           <ul className="space-y-2 text-sm text-white/70">
             <li>
               <a
-                href="/services/civil-engineering"
+                href="/services/construction-inspection"
                 className="hover:text-white transition-colors"
               >
-                Civil Engineering
+                Construction Inspection
+              </a>
+            </li>
+            <li>
+              <a
+                href="/services/construction-inspection/aviation"
+                className="hover:text-white transition-colors"
+              >
+                Aviation Inspection
+              </a>
+            </li>
+            <li>
+              <a
+                href="/services/construction-inspection/wastewater"
+                className="hover:text-white transition-colors"
+              >
+                Wastewater Inspection
               </a>
             </li>
             <li>
@@ -51,22 +67,6 @@ const Footer = () => {
                 className="hover:text-white transition-colors"
               >
                 Transportation Inspection
-              </a>
-            </li>
-            <li>
-              <a
-                href="/services/construction-inspection/water-treatment-plants"
-                className="hover:text-white transition-colors"
-              >
-                Water Treatment Plant Inspection
-              </a>
-            </li>
-            <li>
-              <a
-                href="/services/management"
-                className="hover:text-white transition-colors"
-              >
-                Project Management
               </a>
             </li>
           </ul>
@@ -82,7 +82,7 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm text-white/70">
             <li><a href="/#about" className="hover:text-white transition-colors">About FGI</a></li>
-            <li><a href="/projects/placeholderslug" className="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="/projects" className="hover:text-white transition-colors">Projects</a></li>
             <li><a href="/careers" className="hover:text-white transition-colors">Careers</a></li>
             <li><a href="mailto:info@farahgroupinc.com" className="hover:text-white transition-colors">info@farahgroupinc.com</a></li>
           </ul>

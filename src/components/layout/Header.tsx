@@ -2,70 +2,104 @@ import { useState, useRef } from "react";
 
 const serviceGroups = [
   {
-    category: "Civil Engineering",
-    href: "/services/civil-engineering",
+    category: "Aviation",
+    href: "/services/construction-inspection/aviation",
     description:
-      "Design & analysis for public infrastructure from concept through PS&E.",
+      "Airfield inspection & QA on active runways and taxiways, to FAA standards.",
     items: [
       {
-        label: "Roadway & Highway Design",
-        href: "/services/civil-engineering",
+        label: "FAA P-401 HMA Paving",
+        href: "/services/construction-inspection/aviation",
       },
-      { label: "Drainage & Hydrology", href: "/services/civil-engineering" },
-      { label: "Grading & Earthwork", href: "/services/civil-engineering" },
-      { label: "Utility Infrastructure", href: "/services/civil-engineering" },
-      { label: "Structural Engineering", href: "/services/civil-engineering" },
       {
-        label: "Environmental Compliance",
-        href: "/services/civil-engineering",
+        label: "Airfield Lighting & Electrical",
+        href: "/services/construction-inspection/aviation",
+      },
+      {
+        label: "Overnight Closure Coordination",
+        href: "/services/construction-inspection/aviation",
+      },
+      {
+        label: "Quantity Verification",
+        href: "/services/construction-inspection/aviation",
       },
     ],
   },
   {
-    category: "Construction Inspection",
-    href: "/services/construction-inspection",
+    category: "Wastewater",
+    href: "/services/construction-inspection/wastewater",
     description:
-      "Rigorous field oversight ensuring quality, safety, and agency compliance.",
+      "Treatment plants, lift stations, force mains, and collection systems.",
     items: [
       {
-        label: "Transportation Infrastructure",
+        label: "Treatment Plant Construction",
+        href: "/services/construction-inspection/wastewater",
+      },
+      {
+        label: "Lift Stations & Force Mains",
+        href: "/services/construction-inspection/wastewater",
+      },
+      {
+        label: "Structural · Mechanical · Electrical",
+        href: "/services/construction-inspection/wastewater",
+      },
+      {
+        label: "Startup & Commissioning",
+        href: "/services/construction-inspection/wastewater",
+      },
+    ],
+  },
+  {
+    category: "Transportation",
+    href: "/services/construction-inspection/transportation",
+    description:
+      "Field QA for roadway, bridge, and drainage corridors from base to striping.",
+    items: [
+      {
+        label: "Roadway & Bridge",
         href: "/services/construction-inspection/transportation",
       },
       {
-        label: "Water Treatment Plants",
-        href: "/services/construction-inspection/water-treatment-plants",
+        label: "Drainage & Earthwork",
+        href: "/services/construction-inspection/transportation",
       },
-    ],
-  },
-  {
-    category: "Project Management",
-    href: "/services/management",
-    description:
-      "End-to-end program management keeping complex projects on track.",
-    items: [
-      { label: "Schedule & Budget Control", href: "/services/management" },
-      { label: "Agency Coordination", href: "/services/management" },
-      { label: "Stakeholder Reporting", href: "/services/management" },
-      { label: "Risk Management", href: "/services/management" },
+      {
+        label: "Signals & Lighting",
+        href: "/services/construction-inspection/transportation",
+      },
+      {
+        label: "Materials Testing",
+        href: "/services/construction-inspection/transportation",
+      },
     ],
   },
 ];
 
 const featuredProjects = [
   {
-    label: "New Belmont Ferrous Building",
-    location: "Citizens Energy Group",
-    href: "/projects/belmont-ferrous-building",
+    label: "Runway 14-32 & Taxiway M Rehabilitation",
+    location: "Indianapolis Airport Authority",
+    href: "/projects/indianapolis-airport",
   },
   {
-    label: "AWT Effluent Filter Improvement – Phase 1",
+    label: "Bridgeport Interceptor Storage Facility",
     location: "Citizens Energy Group",
-    href: "/projects/awt-effluent-filter",
+    href: "/projects/bridgeport-interceptor",
   },
   {
-    label: "AWT Solids Management Improvements",
+    label: "Lift Station 101 Force Main Replacement",
     location: "Citizens Energy Group",
-    href: "/projects/awt-solids-management",
+    href: "/projects/lift-station-101",
+  },
+  {
+    label: "Hoosier Heartland Highway · SR 25",
+    location: "INDOT",
+    href: "/projects/hoosier-heartland-highway",
+  },
+  {
+    label: "Plantwide Filter Rehab – Phase 2",
+    location: "Citizens Energy Group",
+    href: "/projects/effluent-filter-phase-2",
   },
   {
     label: "Belmont & Southport ONS Wall Tie Replacement",
@@ -149,9 +183,13 @@ function ServicesDropdown({ onClose }: { onClose: () => void }) {
           className="mt-10 pt-6 flex items-center justify-between"
           style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
         >
-          <span className="text-white/30 text-xs uppercase tracking-widest">
-            Civil &amp; Environmental Infrastructure Services
-          </span>
+          <a
+            href="/services/construction-inspection"
+            onClick={onClose}
+            className="text-white/40 hover:text-white text-xs uppercase tracking-widest transition-colors"
+          >
+            All Construction Inspection Services →
+          </a>
           <a
             href="/#contact"
             onClick={onClose}
@@ -257,8 +295,8 @@ function ProjectsDropdown({ onClose }: { onClose: () => void }) {
                 </h3>
                 <p className="text-white/50 text-sm leading-relaxed">
                   FGI's project portfolio includes construction inspection and
-                  management work for major water and wastewater treatment
-                  facilities across Indiana.
+                  contract administration for aviation, wastewater, and
+                  transportation infrastructure across Indiana.
                 </p>
               </div>
               <a
@@ -299,30 +337,30 @@ const Header = () => {
 
   return (
     <header
-      style={{ backgroundColor: "var(--fgi-navy)" }}
-      className="sticky top-0 z-50 shadow-lg"
+      style={{ backgroundColor: "#ffffff", borderBottom: "1px solid rgba(0,0,0,0.08)" }}
+      className="sticky top-0 z-50 shadow-sm"
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-14 relative">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20 relative">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 shrink-0">
           <img
             src="/logo-fgi.png"
             alt="FGI Logo"
-            className="w-20 h-20 object-contain"
+            className="w-28 h-28 object-contain"
           />
-          <div className="w-px h-10 bg-white/40 shrink-0" />
+          <div className="w-px h-10 shrink-0" style={{ backgroundColor: "var(--fgi-navy)/30", background: "rgba(17,30,78,0.25)" }} />
           <div
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             className="leading-tight"
           >
-            <div className="text-white font-extrabold text-xl tracking-widest uppercase">
+            <div style={{ color: "var(--fgi-navy)" }} className="font-extrabold text-xl tracking-widest uppercase">
               FARAH GROUP INC
             </div>
             <div
               style={{ color: "var(--fgi-blue)" }}
               className="text-[10px] tracking-widest uppercase font-semibold"
             >
-              Civil &amp; Environmental Infrastructure
+              Civil &amp; Environmental Infrastructure Services
             </div>
           </div>
         </a>
@@ -335,7 +373,8 @@ const Header = () => {
             onMouseLeave={scheduleClose}
           >
             <button
-              className="flex items-center gap-1 text-white/80 hover:text-white text-sm font-medium tracking-wide uppercase transition-colors"
+              style={{ color: "var(--fgi-navy)" }}
+              className="flex items-center gap-1 text-sm font-medium tracking-wide uppercase transition-colors hover:opacity-70"
               onClick={() =>
                 setActiveDropdown(
                   activeDropdown === "services" ? null : "services",
@@ -371,7 +410,8 @@ const Header = () => {
             onMouseLeave={scheduleClose}
           >
             <button
-              className="flex items-center gap-1 text-white/80 hover:text-white text-sm font-medium tracking-wide uppercase transition-colors"
+              style={{ color: "var(--fgi-navy)" }}
+              className="flex items-center gap-1 text-sm font-medium tracking-wide uppercase transition-colors hover:opacity-70"
               onClick={() =>
                 setActiveDropdown(
                   activeDropdown === "projects" ? null : "projects",
@@ -403,13 +443,15 @@ const Header = () => {
 
           <a
             href="/#about"
-            className="text-white/80 hover:text-white text-sm font-medium tracking-wide uppercase transition-colors"
+            style={{ color: "var(--fgi-navy)" }}
+            className="text-sm font-medium tracking-wide uppercase transition-colors hover:opacity-70"
           >
             About
           </a>
           <a
             href="/careers"
-            className="text-white/80 hover:text-white text-sm font-medium tracking-wide uppercase transition-colors"
+            style={{ color: "var(--fgi-navy)" }}
+            className="text-sm font-medium tracking-wide uppercase transition-colors hover:opacity-70"
           >
             Careers
           </a>
@@ -424,7 +466,8 @@ const Header = () => {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden p-2"
+          style={{ color: "var(--fgi-navy)" }}
           onClick={() => setMobileOpen((o) => !o)}
           aria-label="Toggle menu"
         >
@@ -474,12 +517,13 @@ const Header = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          style={{ backgroundColor: "var(--fgi-navy-dark)" }}
+          style={{ backgroundColor: "#ffffff", borderTop: "1px solid rgba(0,0,0,0.08)" }}
           className="md:hidden px-6 pb-6 flex flex-col gap-0 max-h-[80vh] overflow-y-auto"
         >
           {/* Services accordion */}
           <button
-            className="flex items-center justify-between text-white/80 text-sm font-medium uppercase tracking-wide py-4 border-b border-white/10"
+            style={{ color: "var(--fgi-navy)" }}
+            className="flex items-center justify-between text-sm font-medium uppercase tracking-wide py-4 border-b border-black/10"
             onClick={() => setMobileServicesOpen((o) => !o)}
           >
             Services
@@ -503,7 +547,7 @@ const Header = () => {
             </svg>
           </button>
           {mobileServicesOpen && (
-            <div className="flex flex-col gap-1 py-3 pl-4 border-b border-white/10">
+            <div className="flex flex-col gap-1 py-3 pl-4 border-b border-black/10">
               {serviceGroups.map((group) => (
                 <div key={group.category} className="mb-3">
                   <div
@@ -519,7 +563,8 @@ const Header = () => {
                     <a
                       key={item.label}
                       href={item.href}
-                      className="block text-white/60 hover:text-white text-sm py-1"
+                      style={{ color: "var(--fgi-navy)" }}
+                      className="block text-sm py-1 opacity-70 hover:opacity-100"
                       onClick={() => setMobileOpen(false)}
                     >
                       {item.label}
@@ -532,7 +577,8 @@ const Header = () => {
 
           {/* Projects accordion */}
           <button
-            className="flex items-center justify-between text-white/80 text-sm font-medium uppercase tracking-wide py-4 border-b border-white/10"
+            style={{ color: "var(--fgi-navy)" }}
+            className="flex items-center justify-between text-sm font-medium uppercase tracking-wide py-4 border-b border-black/10"
             onClick={() => setMobileProjectsOpen((o) => !o)}
           >
             Projects
@@ -556,10 +602,11 @@ const Header = () => {
             </svg>
           </button>
           {mobileProjectsOpen && (
-            <div className="flex flex-col py-3 pl-4 border-b border-white/10">
+            <div className="flex flex-col py-3 pl-4 border-b border-black/10">
               <a
                 href="/projects"
-                className="text-white/80 text-sm py-1.5 font-semibold"
+                style={{ color: "var(--fgi-navy)" }}
+                className="text-sm py-1.5 font-semibold"
                 onClick={() => setMobileOpen(false)}
               >
                 All Projects
@@ -568,7 +615,8 @@ const Header = () => {
                 <a
                   key={p.label}
                   href={p.href}
-                  className="block text-white/60 hover:text-white text-sm py-1.5"
+                  style={{ color: "var(--fgi-navy)" }}
+                  className="block text-sm py-1.5 opacity-70 hover:opacity-100"
                   onClick={() => setMobileOpen(false)}
                 >
                   {p.label}
@@ -579,14 +627,16 @@ const Header = () => {
 
           <a
             href="/#about"
-            className="text-white/80 hover:text-white text-sm font-medium uppercase tracking-wide py-4 border-b border-white/10"
+            style={{ color: "var(--fgi-navy)" }}
+            className="text-sm font-medium uppercase tracking-wide py-4 border-b border-black/10 opacity-80 hover:opacity-100"
             onClick={() => setMobileOpen(false)}
           >
             About
           </a>
           <a
             href="/careers"
-            className="text-white/80 hover:text-white text-sm font-medium uppercase tracking-wide py-4 border-b border-white/10"
+            style={{ color: "var(--fgi-navy)" }}
+            className="text-sm font-medium uppercase tracking-wide py-4 border-b border-black/10 opacity-80 hover:opacity-100"
             onClick={() => setMobileOpen(false)}
           >
             Careers

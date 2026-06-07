@@ -44,13 +44,13 @@ const capabilities = [
     ),
   },
   {
-    title: "Nonconformance Management",
+    title: "Contract Administration",
     description:
-      "Identification, documentation, and resolution tracking for deficient work, ensuring nothing is left unaddressed before project acceptance.",
+      "Owner's-representative services in the field, quantity verification, pay application review, change order processing, shop drawing and RFI tracking, and closeout documentation.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
   },
@@ -69,16 +69,22 @@ const capabilities = [
 
 const specializations = [
   {
-    label: "Transportation Infrastructure",
+    label: "Aviation",
+    description:
+      "Airfield construction inspection and quality assurance, FAA P-401 HMA paving, airfield lighting, and overnight-closure coordination on active runways and taxiways.",
+    href: "/services/construction-inspection/aviation",
+  },
+  {
+    label: "Wastewater",
+    description:
+      "Treatment plants, lift stations, force mains, and collection systems, structural, mechanical, electrical, and commissioning oversight.",
+    href: "/services/construction-inspection/wastewater",
+  },
+  {
+    label: "Transportation",
     description:
       "Roads, bridges, drainage, signals, and earthwork, field-level QA for transportation corridors from base prep through final striping.",
     href: "/services/construction-inspection/transportation",
-  },
-  {
-    label: "Water Treatment Plants",
-    description:
-      "Specialized oversight for water and wastewater treatment facilities, civil, mechanical, electrical, and commissioning support.",
-    href: "/services/construction-inspection/water-treatment-plants",
   },
 ];
 
@@ -98,7 +104,7 @@ const Page = () => {
             Construction<br /><span style={{ color: "var(--fgi-blue)" }}>Inspection</span>
           </h1>
           <p className="text-white/70 text-lg max-w-xl leading-relaxed">
-            Rigorous field oversight for public infrastructure, keeping contractors accountable, agencies protected, and projects built to last.
+            Rigorous field oversight and contract administration for public infrastructure, keeping contractors accountable, agencies protected, and projects built to last.
           </p>
         </div>
       </section>
@@ -106,7 +112,7 @@ const Page = () => {
       <section style={{ backgroundColor: "var(--fgi-navy-dark)" }} className="py-10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { label: "Sectors", value: "Transportation · Water · Public Works" },
+            { label: "Sectors", value: "Aviation · Wastewater · Transportation" },
             { label: "Certifications", value: "INDOT Certified Inspectors" },
             { label: "Coverage", value: "Full-Time Resident & On-Call" },
           ].map((item) => (
@@ -142,7 +148,7 @@ const Page = () => {
             <div style={{ color: "var(--fgi-blue)", fontFamily: "'Barlow Condensed', sans-serif" }} className="text-sm font-semibold uppercase tracking-[0.2em] mb-2">Specializations</div>
             <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", color: "var(--fgi-navy)" }} className="text-4xl md:text-5xl font-extrabold uppercase">Inspection by Sector</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {specializations.map((s) => (
               <a key={s.label} href={s.href} className="group block bg-white border border-gray-200 p-8 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between gap-4 mb-4">

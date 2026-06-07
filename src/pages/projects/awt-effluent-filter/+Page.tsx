@@ -1,14 +1,14 @@
 const relatedProjects = [
-  { title: "New Belmont Ferrous Building", category: "Construction Management", value: "$2,657,000", image: "/headpic4.webp", href: "/projects/belmont-ferrous-building" },
-  { title: "AWT Solids Management Improvements", category: "Construction Management", value: "$1,820,000", image: "/LS.jpg", href: "/projects/awt-solids-management" },
-  { title: "Belmont & Southport ONS Wall Tie Replacement", category: "Construction Inspection", value: "$9,264,000", image: "/headpic2.webp", href: "/projects/wall-tie-replacement" },
+  { title: "New Belmont Ferrous Building", category: "Wastewater", value: "$2,657,000", image: "/ferrous-building-1.jpg", href: "/projects/belmont-ferrous-building" },
+  { title: "AWT Solids Management Improvements", category: "Wastewater", value: "$1,820,000", image: "/headpic4.webp", href: "/projects/awt-solids-management" },
+  { title: "Belmont & Southport ONS Wall Tie Replacement", category: "Wastewater", value: "$9,264,000", image: "/wall-tie-1.jpg", href: "/projects/wall-tie-replacement" },
 ];
 
 const Page = () => {
   return (
     <>
       <section className="relative overflow-hidden" style={{ backgroundColor: "var(--fgi-navy)", minHeight: "56vh" }}>
-        <img src="/headpic3.webp" alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <img src="/effluent-filter-1.jpg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, var(--fgi-navy) 30%, rgba(27,42,107,0.5) 100%)" }} />
         <div style={{ backgroundColor: "var(--fgi-blue)" }} className="absolute top-0 left-0 right-0 h-1" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
@@ -18,7 +18,7 @@ const Page = () => {
           </a>
           <div className="flex flex-wrap gap-2 mt-2 mb-4">
             <span className="px-3 py-1 text-white text-[10px] uppercase tracking-widest font-semibold" style={{ backgroundColor: "var(--fgi-blue)" }}>
-              Construction Inspection
+              Wastewater
             </span>
             <span className="px-3 py-1 text-white/70 text-[10px] uppercase tracking-widest font-semibold border border-white/20">
               Citizens Energy Group
@@ -115,7 +115,7 @@ const Page = () => {
 
       <section className="py-4 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-3">
-          {["/headpic1.webp", "/Launch-Shaft.jpg", "/headpic4.webp"].map((src, i) => (
+          {["/effluent-filter-2.jpg", "/effluent-filter-3.jpg", "/effluent-filter-4.jpg"].map((src, i) => (
             <div key={i} className="relative h-48 overflow-hidden">
               <img src={src} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>

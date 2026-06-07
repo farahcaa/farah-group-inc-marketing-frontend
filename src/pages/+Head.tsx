@@ -1,13 +1,13 @@
 export default function Head() {
   const title = "Farah Group Inc | Civil & Environmental Infrastructure Services";
   const description =
-    "Farah Group Inc delivers expert civil engineering, construction inspection, and project management services for transportation and water infrastructure projects.";
+    "Farah Group Inc delivers expert construction inspection, quality assurance, and contract administration for aviation, wastewater, and transportation infrastructure projects.";
 
   return (
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content="civil engineering, construction inspection, project management, infrastructure, transportation, water treatment, environmental engineering" />
+      <meta name="keywords" content="construction inspection, quality assurance, contract administration, owner's representative, aviation inspection, FAA P-401, wastewater inspection, transportation inspection, infrastructure" />
       <meta name="author" content="Farah Group Inc" />
 
       <meta property="og:type" content="website" />
@@ -29,10 +29,10 @@ export default function Head() {
           description,
           logo: "https://farahgroupinc.com/logo-fgi.png",
           serviceType: [
-            "Civil Engineering",
             "Construction Inspection",
-            "Project Management",
-            "Environmental Infrastructure Services",
+            "Quality Assurance",
+            "Contract Administration",
+            "Aviation, Wastewater & Transportation Inspection",
           ],
         })}
       </script>

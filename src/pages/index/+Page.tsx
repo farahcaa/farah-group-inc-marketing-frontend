@@ -7,7 +7,7 @@ const SLIDES = [
   "/headpic4.webp",
   "/Launch-Shaft.jpg",
   "/Levee.jpg",
-  "/excavation.jpg",
+  "/wall-tie-1.jpg",
   "/LS.jpg",
 ];
 
@@ -119,14 +119,35 @@ const services = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
+          d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+        />
+      </svg>
+    ),
+    title: "Aviation",
+    description:
+      "Airfield construction inspection and quality assurance, FAA P-401 paving, airfield lighting, and overnight-closure coordination on active runways and taxiways.",
+    href: "/services/construction-inspection/aviation",
+  },
+  {
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
           d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
         />
       </svg>
     ),
-    title: "Civil Engineering",
+    title: "Wastewater",
     description:
-      "Comprehensive civil engineering design and analysis for public infrastructure, roadways, drainage, and site development projects.",
-    href: "/services/civil-engineering",
+      "Construction inspection for treatment plants, lift stations, force mains, and collection systems, structural, mechanical, electrical, and commissioning oversight.",
+    href: "/services/construction-inspection/wastewater",
   },
   {
     icon: (
@@ -140,35 +161,14 @@ const services = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m0 0L9 7"
         />
       </svg>
     ),
-    title: "Construction Inspection",
+    title: "Transportation",
     description:
-      "Rigorous inspection services for transportation corridors and water treatment facilities, ensuring compliance with agency standards.",
-    href: "/services/construction-inspection",
-  },
-  {
-    icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-        />
-      </svg>
-    ),
-    title: "Project Management",
-    description:
-      "End-to-end project management services that keep complex infrastructure programs on schedule, on budget, and on scope.",
-    href: "/services/management",
+      "Field quality assurance for roadway, bridge, and drainage corridors, from base preparation and earthwork through final striping.",
+    href: "/services/construction-inspection/transportation",
   },
 ];
 
@@ -180,24 +180,18 @@ const stats = [
 ];
 
 const inspectionServices = [
-  {
-    label: "Transportation Infrastructure",
-    href: "/services/construction-inspection/transportation",
-  },
-  {
-    label: "Water Treatment Plants",
-    href: "/services/construction-inspection/water-treatment-plants",
-  },
+  { label: "Field Quality Assurance", href: "/services/construction-inspection" },
+  { label: "Materials Testing Oversight", href: "/services/construction-inspection" },
+  { label: "Contract Administration", href: "/services/construction-inspection" },
+  { label: "Quantity Verification", href: "/services/construction-inspection" },
+  { label: "Closeout & Documentation", href: "/services/construction-inspection" },
 ];
 
 const Page = () => {
   return (
     <>
       {/* Hero */}
-      <section
-        className="relative overflow-hidden"
-        style={{ minHeight: "92vh" }}
-      >
+      <section className="relative overflow-hidden min-h-[60vh] md:min-h-[92vh]">
         <HeroSlideshow />
 
         {/* Accent bar */}
@@ -206,11 +200,11 @@ const Page = () => {
           className="absolute top-0 left-0 right-0 h-1 z-10"
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-28 md:py-36 pb-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-36 pb-20 md:pb-24">
           <div className="max-w-3xl">
             <div
               style={{
-                color: "var(--fgi-blue)",
+                color: "#ffffff",
                 fontFamily: "'Barlow Condensed', sans-serif",
               }}
               className="text-sm font-semibold uppercase tracking-[0.2em] mb-4"
@@ -226,9 +220,9 @@ const Page = () => {
               <span style={{ color: "var(--fgi-blue)" }}>That Lasts.</span>
             </h1>
             <p className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
-              Farah Group Inc delivers expert civil engineering, construction
-              inspection, and project management services, from transportation
-              networks to water treatment facilities.
+              Farah Group Inc delivers expert construction inspection, quality
+              assurance, and contract administration, from active airfields and
+              wastewater facilities to transportation corridors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -298,8 +292,13 @@ const Page = () => {
               }}
               className="text-4xl md:text-5xl font-extrabold uppercase"
             >
-              Core Services
+              Construction Inspection by Sector
             </h2>
+            <p className="text-gray-500 text-base leading-relaxed mt-3 max-w-2xl">
+              Farah Group Inc is a construction inspection firm. We deliver field
+              quality assurance and contract administration across three sectors,
+              keeping public infrastructure built to spec and on the record.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,7 +345,7 @@ const Page = () => {
               }}
               className="text-sm font-semibold uppercase tracking-widest mb-3"
             >
-              Construction Inspection Specializations
+              What Every Engagement Includes
             </p>
             <div className="flex flex-wrap gap-4">
               {inspectionServices.map((item) => (
@@ -391,22 +390,22 @@ const Page = () => {
               }}
               className="text-4xl md:text-5xl font-extrabold uppercase mb-6"
             >
-              Engineering Excellence
+              Accountability
               <br />
-              Since Day One
+              In the Field
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Farah Group Inc is a civil and environmental infrastructure firm
-              committed to delivering precision engineering and rigorous
-              oversight on every project. We partner with public agencies and
-              private clients to bring technical expertise and accountability to
-              infrastructure challenges.
+              Farah Group Inc is a construction inspection firm committed to
+              delivering rigorous field oversight, quality assurance, and
+              contract administration on every project. We serve as the owner's
+              representative in the field, partnering with public agencies and
+              contractors to keep infrastructure built to spec.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              From initial design through final inspection, our
-              multidisciplinary team ensures that every structure, roadway, and
-              treatment facility meets the highest standards of safety and
-              performance.
+              From groundbreaking through final acceptance, our inspectors verify
+              that every structure, runway, and treatment facility meets the
+              highest standards of safety, quality, and performance, and document
+              every step of the way.
             </p>
             <a
               href="#contact"
@@ -426,7 +425,7 @@ const Page = () => {
               },
               {
                 title: "Accountability",
-                body: "We stand behind our work, from design documents to field inspections, quality is non-negotiable.",
+                body: "We stand behind our work, from the first daily report to final acceptance, quality is non-negotiable.",
               },
               {
                 title: "Partnership",
